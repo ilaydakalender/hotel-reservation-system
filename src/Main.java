@@ -21,6 +21,7 @@ public class Main {
             System.out.println("=== OTEL REZERVASYON SİSTEMİ ===\n" +
                     "1- Odaları Listele\n" +
                     "2- Müşterileri Listele\n" +
+                    "3- Müşteri Ekle\n" +
                     "0- Çıkış\n" +
                     "Seçiminiz:");
 
@@ -40,6 +41,25 @@ public class Main {
                                 + "-" + customer.getPhoneNumber());
                     }
                     break;
+
+                case 3:
+                    System.out.println("Müşteri ID giriniz: ");
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.println("Müşteri adı soyadını giriniz: ");
+                    String fullName = scanner.nextLine();
+
+                    System.out.println("Müşteri telefon numaarasını giriniz: ");
+                    String phone = scanner.nextLine();
+
+                    Customer customer = new Customer(id, fullName,phone );
+                    customers.add(customer);
+
+                    System.out.println("Müşteriler başarıyla oluşturuldu.");
+
+                    break;
+
 
                 case 0:
                     running = false;
