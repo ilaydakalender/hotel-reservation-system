@@ -8,10 +8,7 @@ public class Room {
         this.roomType = roomType;
         this.pricePerNight = pricePerNight;
     }
-    /*
-    getter: bir classın private degişkeninin değerini dış
-    dünyaya okumak için kullanılr
-    */
+
     public int getRoomNumber(){
         return roomNumber;
     }
